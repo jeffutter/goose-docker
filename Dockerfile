@@ -6,7 +6,5 @@ RUN go get bitbucket.org/liamstask/goose/cmd/goose
 RUN mkdir /db
 WORKDIR /db
 
-VOLUME ["/db"]
-
 ENTRYPOINT ["/go/bin/goose"]
 CMD ["status"]
