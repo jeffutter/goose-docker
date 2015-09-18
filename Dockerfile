@@ -4,7 +4,9 @@ MAINTAINER jeff@jeffutter.com
 RUN go get bitbucket.org/liamstask/goose/cmd/goose
 
 RUN mkdir /db
-WORKDIR /db
+WORKDIR /
+
+VOLUME ["/db"]
 
 ENTRYPOINT ["/go/bin/goose"]
 CMD ["status"]
